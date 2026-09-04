@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pragun Anand | AI, Automation & UI Developer</title>
-  <meta name="description" content="Portfolio of Pragun Anand — Student Developer at Manav Rachna University, MR IMPACT 6.0 Intern, focused on AI-powered automation, desktop tooling, and intuitive UI systems." />
+  <title>Pragun Anand | Student Developer & AI Engineer</title>
+  <meta name="description" content="Portfolio of Pragun Anand — Student Developer at Manav Rachna University specializing in AI, Machine Learning, Computer Vision, and Digital Product Architecture." />
   <meta name="author" content="Pragun Anand" />
   <meta name="robots" content="index, follow" />
 
+  <!-- Google Knowledge Graph JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -15,44 +16,50 @@
     "name": "Pragun Anand",
     "alternateName": "Pragun Anand Jha",
     "url": "https://pragunanand14.github.io",
-    "jobTitle": "Dashboard & Software Development Intern",
+    "jobTitle": "Dashboard Development & Data Compilation Intern",
     "worksFor": {
       "@type": "Organization",
-      "name": "Manav Rachna University - MR IMPACT 6.0"
+      "name": "Quality Assurance & Accreditation (IQAC) Department, Manav Rachna University"
     },
     "alumniOf": {
       "@type": "CollegeOrUniversity",
       "name": "Manav Rachna University"
     },
+    "sameAs": [
+      "https://github.com/pragunanand14"
+    ],
     "knowsAbout": [
       "Artificial Intelligence",
+      "Machine Learning",
+      "Computer Vision",
       "Desktop Automation",
-      "UI/UX Design",
-      "Python",
-      "Java GUI",
-      "Dashboard Architecture"
+      "Dashboard Architecture",
+      "Data Analytics"
     ]
   }
   </script>
 
+  <!-- Typography: Space Grotesk & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #07090e;
-      --card-bg: rgba(18, 22, 34, 0.7);
+      --bg: #06080d;
+      --card-bg: rgba(15, 20, 31, 0.72);
       --card-border: rgba(255, 255, 255, 0.08);
-      --card-border-hover: rgba(99, 102, 241, 0.4);
+      --card-border-hover: rgba(99, 102, 241, 0.45);
       --accent: #6366f1;
-      --accent-glow: rgba(99, 102, 241, 0.25);
+      --accent-glow: rgba(99, 102, 241, 0.22);
       --cyan: #06b6d4;
+      --emerald: #10b981;
       --text: #f1f5f9;
       --text-muted: #94a3b8;
       --text-dim: #64748b;
       --badge-bg: rgba(99, 102, 241, 0.12);
       --badge-border: rgba(99, 102, 241, 0.3);
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     * {
@@ -74,42 +81,45 @@
       position: relative;
     }
 
-    /* Ambient Background Blobs */
+    /* Ambient Dynamic Glows */
     .ambient-glow {
       position: fixed;
-      width: 550px;
-      height: 550px;
+      width: 600px;
+      height: 600px;
       border-radius: 50%;
       background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-      filter: blur(80px);
+      filter: blur(100px);
       z-index: -1;
       pointer-events: none;
       transition: transform 0.2s ease-out;
     }
 
-    .glow-1 { top: -100px; left: -100px; }
-    .glow-2 { bottom: -100px; right: -100px; background: radial-gradient(circle, rgba(6, 182, 212, 0.18) 0%, transparent 70%); }
+    .glow-1 { top: -150px; left: -150px; }
+    .glow-2 { bottom: -150px; right: -150px; background: radial-gradient(circle, rgba(6, 182, 212, 0.16) 0%, transparent 70%); }
 
-    /* Layout Container */
     .container {
-      max-width: 1040px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 0 1.5rem;
     }
 
-    /* Top Navigation */
-    nav {
+    /* 01 - Navigation */
+    header.nav-wrapper {
       position: sticky;
       top: 1rem;
-      z-index: 100;
+      z-index: 1000;
+      padding: 0 1rem;
+    }
+
+    nav {
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      background: rgba(7, 9, 14, 0.75);
+      background: rgba(8, 11, 18, 0.85);
       border: 1px solid var(--card-border);
       border-radius: 9999px;
-      margin: 1.5rem auto;
-      max-width: 900px;
-      padding: 0.75rem 1.75rem;
+      margin: 0 auto;
+      max-width: 1060px;
+      padding: 0.65rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -124,20 +134,22 @@
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
       font-size: 1.1rem;
-      letter-spacing: -0.02em;
       color: #fff;
+      text-decoration: none;
+      letter-spacing: -0.02em;
     }
 
     .nav-links {
       display: flex;
-      gap: 1.75rem;
+      gap: 1.4rem;
       list-style: none;
+      align-items: center;
     }
 
     .nav-links a {
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.86rem;
       font-weight: 500;
       transition: color 0.2s ease;
     }
@@ -146,9 +158,30 @@
       color: #fff;
     }
 
-    /* Hero Section */
+    .nav-cta {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--card-border);
+      color: #fff !important;
+      padding: 0.4rem 0.9rem;
+      border-radius: 9999px;
+      font-weight: 600 !important;
+      font-size: 0.82rem !important;
+      transition: all 0.2s ease;
+    }
+
+    .nav-cta:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-1px);
+    }
+
+    /* 02 - Hero Section */
     .hero {
-      padding: 5rem 0 3.5rem;
+      padding: 4.5rem 0 3rem;
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      gap: 3rem;
+      align-items: center;
     }
 
     .status-badge {
@@ -158,69 +191,86 @@
       background: var(--badge-bg);
       border: 1px solid var(--badge-border);
       color: #c7d2fe;
-      padding: 0.35rem 0.9rem;
+      padding: 0.35rem 0.95rem;
       border-radius: 9999px;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 500;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
 
     .status-dot {
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background: #10b981;
-      box-shadow: 0 0 10px #10b981;
+      background: var(--emerald);
+      box-shadow: 0 0 10px var(--emerald);
       animation: pulse 2s infinite ease-in-out;
     }
 
     @keyframes pulse {
       0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.3); opacity: 0.7; }
+      50% { transform: scale(1.35); opacity: 0.65; }
     }
 
     h1.hero-title {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
       font-weight: 700;
-      line-height: 1.15;
+      line-height: 1.12;
       letter-spacing: -0.03em;
-      margin-bottom: 1.25rem;
-      background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+      margin-bottom: 1.1rem;
+      background: linear-gradient(135deg, #ffffff 35%, #94a3b8 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     p.hero-desc {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--text-muted);
-      max-width: 680px;
       line-height: 1.7;
+      margin-bottom: 1.75rem;
+    }
+
+    /* Animated Ticker */
+    .hero-ticker {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--cyan);
       margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+
+    .ticker-arrow {
+      color: var(--text-dim);
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.9rem;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.75rem 1.5rem;
+      padding: 0.75rem 1.45rem;
       border-radius: 10px;
       font-weight: 600;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       text-decoration: none;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.25s var(--ease);
       cursor: pointer;
     }
 
     .btn-primary {
       background: #ffffff;
-      color: #0b0f19;
+      color: #080c14;
     }
 
     .btn-primary:hover {
@@ -241,18 +291,104 @@
       transform: translateY(-2px);
     }
 
-    /* Section Styles */
+    /* Hero Visual Card */
+    .hero-avatar-box {
+      position: relative;
+      border-radius: 24px;
+      padding: 2.25rem 2rem;
+      background: linear-gradient(135deg, rgba(25, 32, 50, 0.5) 0%, rgba(13, 17, 27, 0.8) 100%);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(16px);
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+
+    .avatar-symbol {
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      margin: 0 auto 1.25rem;
+      background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #fff;
+      box-shadow: 0 0 35px rgba(99, 102, 241, 0.35);
+    }
+
+    .avatar-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+
+    .avatar-sub {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .avatar-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    /* 03 - Quick Stats */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 2rem 0 3.5rem;
+    }
+
+    .stat-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 1.35rem 1rem;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      transition: transform 0.25s var(--ease), border-color 0.25s var(--ease);
+    }
+
+    .stat-box:hover {
+      transform: translateY(-2px);
+      border-color: var(--card-border-hover);
+    }
+
+    .stat-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.2rem;
+    }
+
+    .stat-lbl {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Section Foundations */
     section {
       padding: 3rem 0;
     }
 
     .section-label {
       text-transform: uppercase;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 700;
       letter-spacing: 0.12em;
       color: var(--cyan);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
 
     .section-heading {
@@ -264,132 +400,369 @@
       color: #ffffff;
     }
 
-    /* Glass Cards */
+    /* Common Card Styling */
     .card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 16px;
-      padding: 2rem;
+      padding: 1.75rem;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      transition: all 0.3s var(--ease);
       position: relative;
-      overflow: hidden;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .card:hover {
       border-color: var(--card-border-hover);
       transform: translateY(-3px);
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
     }
 
-    /* Featured Internship Card */
-    .internship-banner {
+    /* 04 - About Me */
+    .about-grid {
       display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: start;
-      gap: 1.5rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
     }
 
-    .stat-badge {
-      text-align: right;
-      background: rgba(99, 102, 241, 0.1);
-      border: 1px solid rgba(99, 102, 241, 0.3);
-      padding: 0.85rem 1.25rem;
-      border-radius: 12px;
+    .about-item h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      color: #fff;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .about-item p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+
+    /* 05 - What I Build */
+    .build-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .build-card {
+      padding: 1.6rem;
+      border-radius: 14px;
+    }
+
+    .build-icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .build-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+
+    .build-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    /* 06 - Experience */
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .exp-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    .exp-org {
+      color: var(--cyan);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .exp-period {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
       white-space: nowrap;
     }
 
-    .stat-number {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #a5b4fc;
+    .exp-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
     }
 
-    .stat-label {
+    .exp-bullets {
+      list-style: none;
+      margin-bottom: 1rem;
+    }
+
+    .exp-bullets li {
+      position: relative;
+      padding-left: 1.15rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .exp-bullets li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* 07 - Featured Project Spotlight */
+    .featured-spotlight {
+      background: linear-gradient(135deg, rgba(30, 36, 60, 0.6) 0%, rgba(15, 20, 31, 0.85) 100%);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      padding: 2.5rem;
+      border-radius: 20px;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .spotlight-badge {
+      display: inline-block;
       font-size: 0.75rem;
-      color: var(--text-dim);
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
+      color: var(--cyan);
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
     }
 
-    /* Grid for Projects */
+    .spotlight-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.1rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .spotlight-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 780px;
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+
+    /* 08 - Projects Grid & Filters */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .filter-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 0.45rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.84rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover {
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .filter-btn.active {
+      background: var(--badge-bg);
+      border-color: var(--accent);
+      color: #c7d2fe;
+    }
+
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.35rem;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-card.hidden {
+      display: none;
     }
 
     .project-tag {
       display: inline-block;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 600;
-      padding: 0.2rem 0.6rem;
+      padding: 0.2rem 0.55rem;
       border-radius: 6px;
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.06);
       color: #cbd5e1;
-      margin-right: 0.4rem;
-      margin-bottom: 0.5rem;
+      margin-right: 0.35rem;
+      margin-bottom: 0.45rem;
     }
 
     .project-card h3 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.35rem;
-      margin: 0.75rem 0;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
       color: #fff;
     }
 
     .project-card p {
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
+      line-height: 1.55;
       margin-bottom: 1.25rem;
+    }
+
+    .btn-case-study {
+      background: transparent;
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.5rem 0.9rem;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+      margin-top: auto;
+      width: fit-content;
+    }
+
+    .btn-case-study:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.25);
+      color: #fff;
+    }
+
+    /* 09 - Case Study Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 6, 10, 0.8);
+      backdrop-filter: blur(12px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: #0d121c;
+      border: 1px solid var(--card-border-hover);
+      border-radius: 20px;
+      max-width: 780px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 2.5rem;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: none;
+      color: #fff;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease;
+    }
+
+    .modal-close:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .case-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .case-section h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.35rem;
+    }
+
+    .case-section p {
+      color: var(--text-muted);
+      font-size: 0.94rem;
       line-height: 1.6;
     }
 
-    .feature-list {
-      list-style: none;
-      margin-bottom: 1.25rem;
-    }
-
-    .feature-list li {
-      position: relative;
-      padding-left: 1.2rem;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
-    }
-
-    .feature-list li::before {
-      content: "▹";
-      position: absolute;
-      left: 0;
-      color: var(--cyan);
-    }
-
-    /* Skills Modular Grid */
-    .skills-matrix {
+    /* 10 & 11 - Skills & Tech Ecosystem */
+    .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 1.25rem;
+      margin-bottom: 2rem;
     }
 
-    .skill-category {
+    .skill-cat {
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 1.25rem;
+      border-radius: 14px;
+      padding: 1.35rem;
     }
 
-    .skill-category h4 {
-      font-size: 0.9rem;
+    .skill-cat h4 {
+      font-size: 0.88rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
       color: #cbd5e1;
       margin-bottom: 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
     }
 
     .pill-wrap {
@@ -399,29 +772,179 @@
     }
 
     .skill-pill {
-      font-size: 0.82rem;
-      background: rgba(255, 255, 255, 0.06);
+      font-size: 0.8rem;
+      background: rgba(255, 255, 255, 0.05);
       padding: 0.25rem 0.6rem;
       border-radius: 6px;
       color: var(--text-muted);
     }
 
-    /* Footer */
+    /* 11 - Ecosystem Strip */
+    .ecosystem-bar {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.25rem 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .ecosystem-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+    }
+
+    .ecosystem-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+    }
+
+    /* 12 - Achievements */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+
+    /* 13 - Education */
+    .edu-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* 14 - Currently Building */
+    .live-pulse-card {
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      background: rgba(16, 185, 129, 0.03);
+    }
+
+    /* 15 - Journey Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin-left: 0.5rem;
+      border-left: 2px solid var(--card-border);
+    }
+
+    .timeline-node {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .timeline-node:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: calc(-2rem - 6px);
+      top: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 10px var(--cyan);
+    }
+
+    .timeline-year {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-bottom: 0.2rem;
+    }
+
+    .timeline-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.2rem;
+    }
+
+    .timeline-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* 16 & 17 - Resume & Contact */
+    .contact-card {
+      text-align: center;
+      padding: 3.5rem 2rem;
+      background: linear-gradient(135deg, rgba(20, 26, 42, 0.8) 0%, rgba(9, 13, 21, 0.95) 100%);
+    }
+
+    .contact-card h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 0.75rem;
+      color: #fff;
+    }
+
+    .contact-card p {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      font-size: 1rem;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* 18 - Footer */
     footer {
       border-top: 1px solid var(--card-border);
       padding: 3rem 0;
-      margin-top: 4rem;
+      margin-top: 5rem;
       text-align: center;
       color: var(--text-dim);
       font-size: 0.88rem;
     }
 
-    @media (max-width: 768px) {
-      .internship-banner {
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
         grid-template-columns: 1fr;
+        padding: 3rem 0;
       }
-      .stat-badge {
-        text-align: left;
+      .stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .about-grid {
+        grid-template-columns: 1fr;
       }
       .nav-links {
         display: none;
@@ -431,155 +954,798 @@
 </head>
 <body>
 
+  <!-- Background Lighting Effects -->
   <div class="ambient-glow glow-1"></div>
   <div class="ambient-glow glow-2"></div>
 
-  <nav>
-    <div class="nav-brand">Pragun Anand</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#toolkit">Toolkit</a></li>
-    </ul>
-  </nav>
+  <!-- 01 — NAVIGATION -->
+  <header class="nav-wrapper">
+    <nav>
+      <a href="#home" class="nav-brand">Pragun Anand</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#resume" class="nav-cta">Download Resume</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="container">
-    <header class="hero" id="about">
-      <div class="status-badge">
-        <span class="status-dot"></span>
-        Currently Interning: Dashboard Intern @ MR IMPACT 6.0
+  <main class="container">
+    <!-- 02 — HERO / HOME -->
+    <section class="hero" id="home">
+      <div>
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          Dashboard Intern @ IQAC • Manav Rachna University
+        </div>
+        <h1 class="hero-title">Pragun Anand</h1>
+        <p class="hero-desc">
+          Student Developer building intelligent, practical digital experiences. Specializing in AI-powered automation, machine learning systems, computer vision interactions, and scalable dashboard architecture.
+        </p>
+        <div class="hero-ticker">
+          <span>AI</span>
+          <span class="ticker-arrow">→</span>
+          <span>ML</span>
+          <span class="ticker-arrow">→</span>
+          <span>Vision</span>
+          <span class="ticker-arrow">→</span>
+          <span>Automation</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Explore My Work</a>
+          <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+        </div>
       </div>
-      <h1 class="hero-title">Engineering pragmatic tools,<br>AI workflows & sleek interfaces.</h1>
-      <p class="hero-desc">
-        Undergraduate at Manav Rachna University working at the intersection of practical software development, interactive dashboards, and desktop automation. Focused on turning complex logic into structured, responsive experiences.
-      </p>
-      <div class="hero-actions">
-        <a href="https://github.com/pragunanand14" target="_blank" rel="noopener" class="btn btn-primary">
-          Explore Repositories
-        </a>
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="btn btn-secondary">
-          Connect on LinkedIn
-        </a>
-      </div>
-    </header>
 
-    <section id="experience">
-      <div class="section-label">Selected Experience</div>
-      <h2 class="section-heading">Competitive Internship</h2>
-
-      <div class="card">
-        <div class="internship-banner">
-          <div>
-            <div class="project-tag">Cohort 6.0</div>
-            <div class="project-tag">Active 2026</div>
-            <h3 style="font-size: 1.4rem; color: #fff; margin-top: 0.5rem;">Dashboard Developer — Quality Assurance & Accreditation</h3>
-            <p style="color: var(--cyan); font-weight: 500; font-size: 0.95rem; margin-bottom: 0.75rem;">Manav Rachna University</p>
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
-              Selected for the competitive MR IMPACT 6.0 initiative. Currently spearheading UI/UX layout and dashboard architecture for institutional accreditation teams, translating hierarchical administrative metrics into intuitive digital views.
-            </p>
-          </div>
-          <div class="stat-badge">
-            <div class="stat-number">75 / 3,600+</div>
-            <div class="stat-label">Applicants Selected (~2%)</div>
-          </div>
+      <div class="hero-avatar-box">
+        <div class="avatar-symbol">PA</div>
+        <h3 class="avatar-title">Pragun Anand</h3>
+        <p class="avatar-sub">Developer • AI & Interface Architecture</p>
+        <div class="avatar-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Dashboards</span>
+          <span class="project-tag">Computer Vision</span>
+          <span class="project-tag">Automation</span>
         </div>
       </div>
     </section>
 
+    <!-- 03 — QUICK STATS -->
+    <div class="stats-bar">
+      <div class="stat-box">
+        <div class="stat-num">10+</div>
+        <div class="stat-lbl">Built Projects</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">3</div>
+        <div class="stat-lbl">Internships & Roles</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">5+</div>
+        <div class="stat-lbl">Technical Domains</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">2026</div>
+        <div class="stat-lbl">MR IMPACT Intern</div>
+      </div>
+    </div>
+
+    <!-- 04 — ABOUT ME -->
+    <section id="about">
+      <div class="section-label">Profile</div>
+      <h2 class="section-heading">About Me</h2>
+      <div class="about-grid">
+        <div class="card about-item">
+          <h3><span>👤</span> Who I Am</h3>
+          <p>
+            An undergraduate developer at Manav Rachna University who bridges technical software engineering with human-focused interface design. I focus on building systems that actually perform work rather than simple classroom exercises.
+          </p>
+        </div>
+        <div class="card about-item">
+          <h3><span>⚡</span> What I Do</h3>
+          <p>
+            I develop end-to-end applications, institutional dashboards, and automation tooling. My focus revolves around building automated desktop agents, predictive machine learning pipelines, and responsive frontends.
+          </p>
+        </div>
+        <div class="card about-item">
+          <h3><span>🔬</span> What I'm Interested In</h3>
+          <p>
+            Autonomous AI workflows, local LLM orchestration, touchless gesture interfaces using computer vision, and building digital tools that eliminate redundant cognitive overhead for users.
+          </p>
+        </div>
+        <div class="card about-item">
+          <h3><span>🚀</span> What I'm Working Toward</h3>
+          <p>
+            Developing modular, production-ready AI tools and deepening my expertise in systems engineering, human-computer interaction, and intelligent enterprise software solutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 — "WHAT I BUILD" -->
+    <section>
+      <div class="section-label">Disciplines</div>
+      <h2 class="section-heading">What I Build</h2>
+      <div class="build-grid">
+        <div class="card build-card">
+          <div class="build-icon">🤖</div>
+          <h3>AI & Automation</h3>
+          <p>Autonomous agents, OS-level manipulation, prompt engineering workflows, and intelligent productivity assistants.</p>
+        </div>
+        <div class="card build-card">
+          <div class="build-icon">🧠</div>
+          <h3>Machine Learning</h3>
+          <p>Supervised learning models, behavioral predictive analytics, and exploratory data pipelines applied to real metrics.</p>
+        </div>
+        <div class="card build-card">
+          <div class="build-icon">👁</div>
+          <h3>Computer Vision</h3>
+          <p>Real-time hand tracking, gesture parsing, landmark coordinate mapping, and touchless interaction architectures.</p>
+        </div>
+        <div class="card build-card">
+          <div class="build-icon">💻</div>
+          <h3>Digital Products</h3>
+          <p>Enterprise institutional dashboards, financial utility mobile apps, and interactive UI with strict information hierarchy.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 — EXPERIENCE -->
+    <section id="experience">
+      <div class="section-label">Experience</div>
+      <h2 class="section-heading">Professional Work History</h2>
+      <div class="experience-list">
+
+        <!-- 1. IQAC Role -->
+        <div class="card">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-title">Dashboard Development & Data Compilation Intern</h3>
+              <div class="exp-org">Quality Assurance & Accreditation (IQAC) Department — Manav Rachna University</div>
+            </div>
+            <div class="exp-period">Sep 2026 – Present</div>
+          </div>
+          <p class="exp-desc">
+            Serving as Dashboard Development and Data Compilation Intern within MRU's Quality Assurance & Accreditation (IQAC) Department under the mentorship of Dr. Deepa Arora.
+          </p>
+          <ul class="exp-bullets">
+            <li>Designing and implementing the institutional IQAC dashboard layout, visual structure, and interactive navigation modules.</li>
+            <li>Compiling, cleaning, and structuring institutional performance metrics to power visual reporting tools for administrative leadership.</li>
+            <li>Translating accreditation criteria and department goals into clear, modular digital card interfaces.</li>
+          </ul>
+        </div>
+
+        <!-- 2. DecodeLabs -->
+        <div class="card">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-title">Data Analytics Intern</h3>
+              <div class="exp-org">DecodeLabs — Virtual</div>
+            </div>
+            <div class="exp-period">Jun 2026 – Jul 2026</div>
+          </div>
+          <p class="exp-desc">
+            Completed a dedicated one-month intensive Data Analytics virtual internship focused on end-to-end dataset transformation and analytical dashboards.
+          </p>
+          <ul class="exp-bullets">
+            <li>Conducted exploratory data analysis (EDA), data cleaning, and preprocessing across complex real-world datasets.</li>
+            <li>Constructed analytical visualizations and statistical representations to extract actionable business insights.</li>
+            <li>Authored summary dashboards highlighting key behavioral trends and variance indicators.</li>
+          </ul>
+        </div>
+
+        <!-- 3. Internshala -->
+        <div class="card">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-title">Internshala Student Partner (ISP)</h3>
+              <div class="exp-org">Internshala — Virtual</div>
+            </div>
+            <div class="exp-period">Jun 2026 – Present</div>
+          </div>
+          <p class="exp-desc">
+            Selected to spearhead student career development outreach and educational awareness across campus networks.
+          </p>
+          <ul class="exp-bullets">
+            <li>Organized and promoted skill-building opportunities, internships, and professional programs to undergraduate peers.</li>
+            <li>Coordinated promotional communication campaigns, demonstrating leadership, community engagement, and strategic outreach.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 07 — FEATURED PROJECT SPOTLIGHT -->
+    <section>
+      <div class="featured-spotlight">
+        <span class="spotlight-badge">Featured System Showcase</span>
+        <h2 class="spotlight-title">IGRIS — AI Desktop Assistant</h2>
+        <p class="spotlight-desc">
+          An operating-system layer companion designed to convert natural language commands into immediate desktop actions. Capable of autonomous file system traversal, document manipulation, and intelligent computer interaction without standard version locks.
+        </p>
+        <div style="margin-bottom: 1.5rem;">
+          <span class="project-tag">AI</span>
+          <span class="project-tag">Python</span>
+          <span class="project-tag">OS Automation</span>
+          <span class="project-tag">Gemini Exploration</span>
+        </div>
+        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          <button class="btn btn-primary" onclick="openModal('igris')">View Case Study →</button>
+          <a href="https://github.com/pragunanand14" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Code ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 — PROJECTS PORTFOLIO -->
     <section id="projects">
-      <div class="section-label">Featured Initiatives</div>
-      <h2 class="section-heading">Systems & Interfaces</h2>
+      <div class="section-label">Works</div>
+      <h2 class="section-heading">All Projects</h2>
+
+      <!-- Category Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI / ML</button>
+        <button class="filter-btn" data-filter="apps">Applications</button>
+        <button class="filter-btn" data-filter="vision">Computer Vision</button>
+        <button class="filter-btn" data-filter="design">Product Design</button>
+        <button class="filter-btn" data-filter="other">Other</button>
+      </div>
 
       <div class="projects-grid">
-        <div class="card project-card">
-          <span class="project-tag">Institutional UI</span>
-          <span class="project-tag">Frontend Architecture</span>
-          <h3>IQAC Management Dashboard</h3>
-          <p>
-            A high-fidelity dashboard built for the Internal Quality Assurance Cell (IQAC). Focuses on structural clarity, modular information architecture, and multi-tier institutional presentation.
-          </p>
-          <ul class="feature-list">
-            <li>Structured views: Director Spotlight, Goal Objectives, and Team Hierarchies</li>
-            <li>Designed interactive navigation models tailored for non-technical leadership</li>
-            <li>Bridged visual prototyping with clean frontend component implementation</li>
-          </ul>
+
+        <!-- 1. IGRIS -->
+        <div class="card project-card" data-category="ai apps">
+          <div>
+            <span class="project-tag">AI / Python</span>
+            <span class="project-tag">Automation</span>
+            <h3>IGRIS</h3>
+            <p>JARVIS-style personal AI assistant capable of running desktop operations and document edits via natural speech.</p>
+          </div>
+          <button class="btn-case-study" onclick="openModal('igris')">View Project →</button>
         </div>
 
-        <div class="card project-card">
-          <span class="project-tag">Autonomous Agent</span>
-          <span class="project-tag">Python Systems</span>
-          <h3>IGRIS — Desktop Automation Agent</h3>
-          <p>
-            An ambitious desktop companion designed to act as an operating-system layer assistant. Translates natural language commands directly into document and file-system manipulation.
-          </p>
-          <ul class="feature-list">
-            <li>File system traversal and real-time document modification via natural language</li>
-            <li>Architected to run on standard environments without version lock-in</li>
-            <li>Designed for LLM workflow integration (Gemini-powered reasoning pipelines)</li>
-          </ul>
+        <!-- 2. Dropout Prediction System -->
+        <div class="card project-card" data-category="ai other">
+          <div>
+            <span class="project-tag">ML / Data</span>
+            <span class="project-tag">EdTech</span>
+            <h3>Dropout Prediction System</h3>
+            <p>Predictive modeling platform that evaluates student metrics to flag potential academic dropouts early.</p>
+          </div>
+          <button class="btn-case-study" onclick="openModal('dropout')">View Project →</button>
         </div>
+
+        <!-- 3. AI Email Triage -->
+        <div class="card project-card" data-category="ai other">
+          <div>
+            <span class="project-tag">AI / NLP</span>
+            <span class="project-tag">Productivity</span>
+            <h3>AI Email Triage</h3>
+            <p>Hackathon system that automatically categorizes incoming emails, identifies action items, and ranks priorities.</p>
+          </div>
+          <button class="btn-case-study" onclick="openModal('triage')">View Project →</button>
+        </div>
+
+        <!-- 4. Anonymous AI -->
+        <div class="card project-card" data-category="ai design">
+          <div>
+            <span class="project-tag">Conversational AI</span>
+            <span class="project-tag">Privacy</span>
+            <h3>Anonymous AI Support</h3>
+            <p>Support platform facilitating natural language advisory conversations while guaranteeing complete anonymity.</p>
+          </div>
+          <button class="btn-case-study" onclick="openModal('anonymous')">View Project →</button>
+        </div>
+
+        <!-- 5. Hand Tracking System -->
+        <div class="card project-card" data-category="vision ai">
+          <div>
+            <span class="project-tag">Computer Vision</span>
+            <span class="project-tag">HCI</span>
+            <h3>Hand Tracking System</h3>
+            <p>Real-time skeletal landmark detection enabling touchless cursor and desktop interaction via webcam gestures.</p>
+          </div>
+          <button class="btn-case-study" onclick="openModal('hand')">View Project →</button>
+        </div>
+
+        <!-- 6. Healthcare Dashboard -->
+        <div class="card project-card" data-category="design apps">
+          <div>
+            <span class="project-tag">Healthcare</span>
+            <span class="project-tag">UI/UX</span>
+            <h3>Healthcare Dashboard</h3>
+            <p>Patient vital signs monitoring portal architected with color-coded critical alert states and role-based access.</p>
+          </div>
+          <button class="btn-case-study" onclick="openModal('healthcare')">View Project →</button>
+        </div>
+
+        <!-- 7. NeuroStep -->
+        <div class="card project-card" data-category="other design">
+          <div>
+            <span class="project-tag">Assistive Tech</span>
+            <span class="project-tag">Hardware</span>
+            <h3>NeuroStep</h3>
+            <p>An exoskeleton-based mobility rehabilitation concept merging assistive biomechanics with startup design thinking.</p>
+          </div>
+          <button class="btn-case-study" onclick="openModal('neurostep')">View Project →</button>
+        </div>
+
+        <!-- 8. E-Portfolio -->
+        <div class="card project-card" data-category="apps design other">
+          <div>
+            <span class="project-tag">Web Architecture</span>
+            <span class="project-tag">SEO</span>
+            <h3>Personal E-Portfolio</h3>
+            <p>High-performance personal web platform featuring schema entity mapping, ambient glows, and zero dependencies.</p>
+          </div>
+          <button class="btn-case-study" onclick="openModal('portfolio')">View Project →</button>
+        </div>
+
+        <!-- 9. SplitSmart -->
+        <div class="card project-card" data-category="apps design">
+          <div>
+            <span class="project-tag">FinTech</span>
+            <span class="project-tag">Android</span>
+            <h3>SplitSmart</h3>
+            <p>Shared expense-splitting mobile app calculating optimal minimum transaction paths without payment locks.</p>
+          </div>
+          <button class="btn-case-study" onclick="openModal('splitsmart')">View Project →</button>
+        </div>
+
+        <!-- 10. Speakease -->
+        <div class="card project-card" data-category="apps design">
+          <div>
+            <span class="project-tag">EdTech</span>
+            <span class="project-tag">Mobile UI</span>
+            <h3>Speakease</h3>
+            <p>Mobile interface focused on building articulation and speaking confidence through guided verbal interactions.</p>
+          </div>
+          <button class="btn-case-study" onclick="openModal('speakease')">View Project →</button>
+        </div>
+
+        <!-- 11. Caloritta -->
+        <div class="card project-card" data-category="apps design">
+          <div>
+            <span class="project-tag">Fitness</span>
+            <span class="project-tag">Mobile UI</span>
+            <h3>Caloritta</h3>
+            <p>Intuitive nutrition tracking app designed for frictionless meal journaling and personalized macronutrient goals.</p>
+          </div>
+          <button class="btn-case-study" onclick="openModal('caloritta')">View Project →</button>
+        </div>
+
       </div>
     </section>
 
-    <section id="toolkit">
-      <div class="section-label">Capabilities</div>
-      <h2 class="section-heading">Technical Stack & Core Disciplines</h2>
+    <!-- 09 — PROJECT CASE STUDY MODAL DIALOG -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOutside(event)">
+      <div class="modal-content" id="modalBox">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div id="modalBody">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </div>
+    </div>
 
-      <div class="skills-matrix">
-        <div class="skill-category">
-          <h4>Core Languages</h4>
+    <!-- 10 — SKILLS -->
+    <section id="skills">
+      <div class="section-label">Capabilities</div>
+      <h2 class="section-heading">Core Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-cat">
+          <h4>Languages</h4>
           <div class="pill-wrap">
             <span class="skill-pill">Python</span>
             <span class="skill-pill">Java</span>
             <span class="skill-pill">JavaScript / ES6</span>
             <span class="skill-pill">SQL</span>
+            <span class="skill-pill">HTML5 / CSS3</span>
           </div>
         </div>
 
-        <div class="skill-category">
-          <h4>AI & Automation</h4>
+        <div class="skill-cat">
+          <h4>AI / Machine Learning</h4>
           <div class="pill-wrap">
-            <span class="skill-pill">Autonomous Workflows</span>
-            <span class="skill-pill">Gemini API</span>
-            <span class="skill-pill">OS Automation</span>
+            <span class="skill-pill">Machine Learning</span>
+            <span class="skill-pill">LLM Tool Calling</span>
+            <span class="skill-pill">AI Automation</span>
+            <span class="skill-pill">Predictive Modeling</span>
             <span class="skill-pill">Prompt Structuring</span>
           </div>
         </div>
 
-        <div class="skill-category">
-          <h4>Interface & UI</h4>
+        <div class="skill-cat">
+          <h4>Computer Vision</h4>
           <div class="pill-wrap">
-            <span class="skill-pill">Dashboard Layouts</span>
-            <span class="skill-pill">Information Architecture</span>
-            <span class="skill-pill">Java AWT / GUI</span>
-            <span class="skill-pill">Modern Responsive CSS</span>
+            <span class="skill-pill">Hand Tracking</span>
+            <span class="skill-pill">Image Processing</span>
+            <span class="skill-pill">Landmark Parsing</span>
+            <span class="skill-pill">HCI Gestures</span>
           </div>
         </div>
 
-        <div class="skill-category">
-          <h4>Development Approach</h4>
+        <div class="skill-cat">
+          <h4>Development & Design</h4>
           <div class="pill-wrap">
-            <span class="skill-pill">Interactive Proof-of-Concepts</span>
-            <span class="skill-pill">Rapid Prototyping</span>
-            <span class="skill-pill">Visual Hierarchy</span>
+            <span class="skill-pill">Dashboard Layouts</span>
+            <span class="skill-pill">Desktop Automation</span>
+            <span class="skill-pill">UI/UX Architecture</span>
+            <span class="skill-pill">Data Compilation</span>
+            <span class="skill-pill">Information Hierarchy</span>
           </div>
+        </div>
+      </div>
+
+      <!-- 11 — TECH STACK ECOSYSTEM -->
+      <div class="ecosystem-bar">
+        <span class="ecosystem-title">Tech Stack Ecosystem</span>
+        <div class="ecosystem-items">
+          <span>Python</span>
+          <span>•</span>
+          <span>Java (AWT/GUI)</span>
+          <span>•</span>
+          <span>Git / GitHub</span>
+          <span>•</span>
+          <span>Android</span>
+          <span>•</span>
+          <span>Gemini API</span>
+          <span>•</span>
+          <span>OpenCV / Vision</span>
         </div>
       </div>
     </section>
 
-    <footer>
-      <p>Designed and built by Pragun Anand • Hosted cleanly on GitHub Pages</p>
-    </footer>
-  </div>
+    <!-- 12 — ACHIEVEMENTS -->
+    <section id="achievements">
+      <div class="section-label">Honors</div>
+      <h2 class="section-heading">Milestones & Achievements</h2>
+      <div class="achievements-grid">
+        <div class="card">
+          <div class="project-tag">Institutional Milestone</div>
+          <h3 style="font-size: 1.15rem; color: #fff; margin: 0.4rem 0;">MR IMPACT 6.0 Selection</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Successfully selected for the MR IMPACT 6.0 Internship program at Manav Rachna University, leading dashboard and institutional data compilation within the IQAC department.
+          </p>
+        </div>
+        <div class="card">
+          <div class="project-tag">Hackathons & Innovation</div>
+          <h3 style="font-size: 1.15rem; color: #fff; margin: 0.4rem 0;">AI Email Triage Platform</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Conceptualized and constructed a working zero-shot email classification and triage system under tight hackathon constraints to eliminate enterprise email overload.
+          </p>
+        </div>
+        <div class="card">
+          <div class="project-tag">Campus Leadership</div>
+          <h3 style="font-size: 1.15rem; color: #fff; margin: 0.4rem 0;">Student Community Engagement</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Chosen as an Internshala Student Partner, leading cross-campus career campaigns and driving participation in virtual upskilling cohorts.
+          </p>
+        </div>
+      </div>
+    </section>
 
+    <!-- 13 — EDUCATION -->
+    <section id="education">
+      <div class="section-label">Academics</div>
+      <h2 class="section-heading">Education</h2>
+      <div class="card edu-card">
+        <div>
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; color: #fff;">Manav Rachna University (MRU)</h3>
+          <p style="color: var(--cyan); font-weight: 500; font-size: 0.94rem;">Bachelor of Technology — Computer Science & Engineering</p>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+            Focusing on Artificial Intelligence, Machine Learning algorithms, and applied software systems.
+          </p>
+        </div>
+        <div class="exp-period">Undergraduate • Present</div>
+      </div>
+    </section>
+
+    <!-- 14 — CURRENTLY BUILDING -->
+    <section>
+      <div class="section-label">Active Sprints</div>
+      <h2 class="section-heading">Currently Building</h2>
+      <div class="card live-pulse-card">
+        <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.75rem;">
+          <span class="status-dot"></span>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem; color: #fff;">IGRIS: Autonomous Action Layer</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1rem;">
+          Refining document manipulation routines and exploring low-latency Gemini multimodal interactions for complex local computer task execution.
+        </p>
+        <div>
+          <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); margin-right: 0.5rem;">Currently Exploring:</span>
+          <span class="project-tag">Agentic Loops</span>
+          <span class="project-tag">Local Tool Calling</span>
+          <span class="project-tag">Touchless Vision HCI</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15 — JOURNEY / TIMELINE -->
+    <section>
+      <div class="section-label">Story</div>
+      <h2 class="section-heading">Journey & Evolution</h2>
+      <div class="timeline">
+        <div class="timeline-node">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2024</div>
+          <div class="timeline-title">Foundations & First Builds</div>
+          <div class="timeline-desc">Explored core Python, Java AWT component structures, and algorithmic logic.</div>
+        </div>
+        <div class="timeline-node">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2025</div>
+          <div class="timeline-title">AI & Exploratory Modeling</div>
+          <div class="timeline-desc">Built initial machine learning models (Dropout Prediction) and explored computer vision gesture tracking.</div>
+        </div>
+        <div class="timeline-node">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2026 (Mid)</div>
+          <div class="timeline-title">Data Analytics & Outreach</div>
+          <div class="timeline-desc">Completed Data Analytics Internship at DecodeLabs and represented student initiatives as an Internshala Partner.</div>
+        </div>
+        <div class="timeline-node">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2026 (Present)</div>
+          <div class="timeline-title">MR IMPACT 6.0 & IGRIS</div>
+          <div class="timeline-desc">Developing the institutional IQAC dashboard at MRU while architecting IGRIS desktop automation.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 16 & 17 — RESUME & CONTACT -->
+    <section id="contact">
+      <div class="card contact-card" id="resume">
+        <h2>Let's build something.</h2>
+        <p>
+          Whether you're interested in a collaboration, discussing an engineering opportunity, exploring AI automation, or simply want to connect — my inbox is open.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:pragunanand14@gmail.com" class="btn btn-primary">Email Me</a>
+          <a href="https://github.com/pragunanand14" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+          <a href="https://www.linkedin.com/in/pragun-anand-jha-810018269/" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
+          <a href="#" class="btn btn-secondary" onclick="alert('Resume download will trigger your uploaded PDF.')">Download Résumé (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 18 — FOOTER -->
+    <footer>
+      <div class="footer-links">
+        <a href="https://github.com/pragunanand14" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:pragunanand14@gmail.com">Email</a>
+      </div>
+      <p style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: #fff; margin-bottom: 0.25rem;">Pragun Anand</p>
+      <p>AI • Software • Innovation</p>
+      <p style="margin-top: 0.75rem; font-size: 0.8rem;">© 2026 Pragun Anand. Built for speed and hosted on GitHub Pages.</p>
+    </footer>
+  </main>
+
+  <!-- Javascript: Case Studies, Filters, Cursor Glow -->
   <script>
-    // Subtle interactive light trail that follows cursor movement
+    // Case Study Database
+    const caseStudies = {
+      igris: {
+        title: "IGRIS — AI Desktop Assistant",
+        problem: "Desktop users are forced to manually navigate directories, search through folders, and perform mechanical file modifications. Existing voice assistants only handle generic search or timers rather than native OS actions.",
+        idea: "Build an operating-system layer companion capable of interpreting natural language instructions to perform direct computer tasks and file editing.",
+        howItWorks: "User speech or text is ingested into an action parser. Instructions are converted into targeted system tool calls that interact directly with the local file system and document streams.",
+        role: "Sole Developer. Architected the Python execution environment, prompt tool-calling logic, and local file I/O operations.",
+        technologies: "Python, OS Automation libraries, Gemini API exploration, Local Document Parsers.",
+        challenges: "Ensuring execution stability without version lock-in across environments and avoiding unintended destructive file modifications.",
+        solution: "Engineered strict sandbox validation routines before any document edit or file move is executed on the host PC.",
+        outcome: "A functional working prototype demonstrating natural language document editing and direct directory management."
+      },
+      dropout: {
+        title: "Dropout Prediction System",
+        problem: "Universities notice student dropouts only after it is too late to intervene, leading to degraded academic outcomes.",
+        idea: "A predictive analytics engine that analyzes academic patterns and demographic attendance indicators to assign an early risk quotient.",
+        howItWorks: "Ingests historical student records, performs feature scaling and correlation matrices, and passes records into a trained supervised classifier.",
+        role: "ML Developer. Handled data preprocessing, exploratory analysis, and model training/evaluation.",
+        technologies: "Python, Scikit-Learn, Pandas, NumPy, Data Visualization.",
+        challenges: "Addressing class imbalance where non-dropout records heavily outnumbered at-risk student records.",
+        solution: "Applied balanced sampling techniques and prioritized precision/recall scores over raw accuracy metrics.",
+        outcome: "Accurate predictive models that flag at-risk student trajectories ahead of semester milestones."
+      },
+      triage: {
+        title: "AI Email Triage System",
+        problem: "Modern professionals lose hours sorting high-volume mailboxes, missing urgent business action items.",
+        idea: "An automated inbox triage agent that classifies incoming emails by urgency, department, and actionability.",
+        howItWorks: "Emails pass through zero-shot NLP classification pipes that extract actionable items and summarize message intent.",
+        role: "Hackathon Developer. Built the triage pipeline and automated summary generation.",
+        technologies: "Python, NLP classification models, API integrations.",
+        challenges: "Summarizing unstructured conversational email threads with multiple reply chains.",
+        solution: "Preprocessed message bodies to strip quoted signatures and focus prompt tokens exclusively on fresh replies.",
+        outcome: "Demonstrated significant reduction in message processing time during hackathon evaluation."
+      },
+      anonymous: {
+        title: "Anonymous AI Support System",
+        problem: "Users often hesitate to seek advice or support due to fear of telemetry logging, tracking, and identity leakage.",
+        idea: "A privacy-first support conversation platform that discards all telemetry and guarantees total identity protection.",
+        howItWorks: "Ephemeral communication tunnels strip headers and IP metadata before passing anonymized user queries to conversational models.",
+        role: "System Designer & Full Stack Developer. Built the non-persistent memory and interface layer.",
+        technologies: "Python, Privacy Engineering, Conversational AI frameworks.",
+        challenges: "Providing empathetic, contextual responses without maintaining permanent session databases.",
+        solution: "Utilized local state-memory tokens that self-terminate immediately upon session close.",
+        outcome: "A human-centered support tool providing safe, zero-trace assistance."
+      },
+      hand: {
+        title: "Real-Time Hand Tracking System",
+        problem: "Traditional physical input hardware limits human-computer interaction in sterile or touchless environments.",
+        idea: "A touchless interface using computer vision to map hand landmarks into operating system pointer actions.",
+        howItWorks: "Webcam video frames are parsed in real time to locate 21 skeletal hand coordinates and measure distance ratios between finger tips.",
+        role: "Computer Vision Developer. Implemented landmark extraction and coordinate gesture conversion.",
+        technologies: "Python, OpenCV, MediaPipe, HCI Algorithms.",
+        challenges: "Jittery landmark movements causing jumpy cursor travel on high-resolution displays.",
+        solution: "Implemented an exponential moving average (EMA) smoothing algorithm to steady the cursor coordinates.",
+        outcome: "Smooth touchless navigation and gesture-triggered desktop control."
+      },
+      healthcare: {
+        title: "Healthcare Clinical Dashboard",
+        problem: "Clinical monitors often present vital signs in confusing tables that slow down medical decision-making during crises.",
+        idea: "A clear, visual patient management dashboard emphasizing rapid color thresholds and role-based triage views.",
+        howItWorks: "Real-time patient vitals are visualized across dynamic timeline charts with automated threshold status alerts.",
+        role: "UI/UX Architect. Designed information hierarchy, navigation, and visual components.",
+        technologies: "Information Architecture, UI Prototyping, Frontend Layouts.",
+        challenges: "Balancing comprehensive patient history with rapid, glanceable vital statistics.",
+        solution: "Created a tiered card structure with expandable drill-down drawers for secondary medical logs.",
+        outcome: "A recognized interface prototype praised for readability and institutional utility."
+      },
+      neurostep: {
+        title: "NeuroStep — Exoskeleton Concept",
+        problem: "Patients undergoing mobility rehabilitation face cumbersome, inaccessible recovery equipment.",
+        idea: "An assistive lower-limb exoskeleton concept engineered for gait rehabilitation and mobility restoration.",
+        howItWorks: "Integrates biomechanical movement tracking with assistive motor actuation to guide natural footstep rhythm.",
+        role: "Concept & Product Ideator. Researched biomechanical constraints and hardware feasibility.",
+        technologies: "Assistive Technology, Hardware Product Ideation, Gait Mechanics.",
+        challenges: "Designing wearable hardware principles that remain light and power-efficient.",
+        solution: "Proposed carbon-composite structural elements and segmented joint assistance algorithms.",
+        outcome: "A validated startup concept demonstrating multi-disciplinary engineering ambition."
+      },
+      portfolio: {
+        title: "Personal E-Portfolio Platform",
+        problem: "Standard student portfolios use bloated templates that suffer from slow load times and poor search engine crawlability.",
+        idea: "A lightning-fast, zero-dependency portfolio built with native Web standards and structured JSON-LD entity metadata.",
+        howItWorks: "Employs optimized CSS glassmorphism, hardware-accelerated transforms, and Semantic HTML.",
+        role: "Full Stack Developer. Handled design, code, and search crawler optimization.",
+        technologies: "HTML5, CSS3, ES6 JavaScript, Schema.org JSON-LD.",
+        challenges: "Creating rich ambient lighting and interactive modals without third-party frameworks or bulky libraries.",
+        solution: "Wrote pure vanilla JavaScript micro-controllers and native CSS variables.",
+        outcome: "A sub-second load time website ready for immediate Google indexing on GitHub Pages."
+      },
+      splitsmart: {
+        title: "SplitSmart — FinTech Expense Engine",
+        problem: "Group travel and roommate bills create tangled webs of circular debt that are confusing to settle.",
+        idea: "A mobile financial ledger application that calculates the minimum number of transactions needed to settle all debts.",
+        howItWorks: "Models group debts as a directed graph and runs a net balance settlement algorithm to minimize payments.",
+        role: "Mobile App Developer. Implemented settlement logic and Android views.",
+        technologies: "Android, Java/Kotlin, Financial Algorithms.",
+        challenges: "Ensuring accurate floating-point currency arithmetic and circular debt resolution.",
+        solution: "Implemented a greedy debt cancellation algorithm to simplify balances.",
+        outcome: "Clean, independent group bill-splitting requiring zero external bank integrations."
+      },
+      speakease: {
+        title: "Speakease — Communication Trainer",
+        problem: "Individuals looking to improve public speaking lack low-pressure tools to practice speaking pace and delivery.",
+        idea: "An interactive mobile application providing structured verbal exercises and speaking feedback.",
+        howItWorks: "Presents prompt-based speaking modules with pacing cues to encourage daily speech discipline.",
+        role: "Mobile Product Designer. Designed interactive flows and user experience.",
+        technologies: "Mobile UI Design, EdTech Interaction, Product Architecture.",
+        challenges: "Keeping users engaged without making practice feel like an academic exam.",
+        solution: "Integrated micro-habit gamification and visual progression rings.",
+        outcome: "A user-tested mobile concept centered on articulation training."
+      },
+      caloritta: {
+        title: "Caloritta — Habit Nutrition Tracker",
+        problem: "Most calorie counters are bloated with ads, complex paywalls, and slow search interfaces.",
+        idea: "A fast, privacy-respecting diet and calorie tracking app built around quick daily food logs.",
+        howItWorks: "Allows users to log nutritional intakes against personalized targets with immediate macro breakdown charts.",
+        role: "UI/UX & Mobile Developer. Designed UI views and meal categorization logic.",
+        technologies: "Mobile Design, Data Visualization, Habit Tracking UX.",
+        challenges: "Eliminating friction in repeated daily meal entry.",
+        solution: "Created quick-tap meal templates and visual macronutrient progress wheels.",
+        outcome: "A smooth, responsive tracking experience tailored to personal fitness goals."
+      }
+    };
+
+    // Modal Controller
+    function openModal(projectId) {
+      const data = caseStudies[projectId];
+      if (!data) return;
+
+      const body = document.getElementById('modalBody');
+      body.innerHTML = `
+        <div style="margin-bottom: 1.5rem;">
+          <span class="project-tag">Case Study</span>
+          <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.85rem; color: #fff; margin-top: 0.4rem;">${data.title}</h2>
+        </div>
+        <div class="case-section">
+          <h4>The Problem</h4>
+          <p>${data.problem}</p>
+        </div>
+        <div class="case-section">
+          <h4>The Proposed Idea</h4>
+          <p>${data.idea}</p>
+        </div>
+        <div class="case-section">
+          <h4>How It Works & Architecture</h4>
+          <p>${data.howItWorks}</p>
+        </div>
+        <div class="case-section">
+          <h4>My Specific Role</h4>
+          <p>${data.role}</p>
+        </div>
+        <div class="case-section">
+          <h4>Technologies Used</h4>
+          <p>${data.technologies}</p>
+        </div>
+        <div class="case-section">
+          <h4>Challenges Faced</h4>
+          <p>${data.challenges}</p>
+        </div>
+        <div class="case-section">
+          <h4>The Solution</h4>
+          <p>${data.solution}</p>
+        </div>
+        <div class="case-section">
+          <h4>Outcome & Impact</h4>
+          <p>${data.outcome}</p>
+        </div>
+      `;
+
+      document.getElementById('modalOverlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function closeModalOnOutside(e) {
+      if (e.target.id === 'modalOverlay') {
+        closeModal();
+      }
+    }
+
+    // Filter Logic
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          if (filter === 'all') {
+            card.classList.remove('hidden');
+          } else {
+            const categories = card.getAttribute('data-category').split(' ');
+            if (categories.includes(filter)) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          }
+        });
+      });
+    });
+
+    // Subtle cursor ambient light tracking
     const glow = document.querySelector('.glow-1');
     window.addEventListener('mousemove', (e) => {
-      const x = e.clientX - 275;
-      const y = e.clientY - 275;
-      glow.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
+      const x = e.clientX - 300;
+      const y = e.clientY - 300;
+      glow.style.transform = `translate(${x * 0.12}px, ${y * 0.12}px)`;
     });
   </script>
 </body>
