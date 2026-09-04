@@ -3,120 +3,584 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pragun Anand Jha | AI/ML & Web Developer</title>
-  <meta name="description" content="Portfolio of Pragun Anand Jha, Computer Science Engineering student specializing in AI, Machine Learning, and Full Stack Web Development." />
-  <meta name="author" content="Pragun Anand Jha" />
+  <title>Pragun Anand | AI, Automation & UI Developer</title>
+  <meta name="description" content="Portfolio of Pragun Anand — Student Developer at Manav Rachna University, MR IMPACT 6.0 Intern, focused on AI-powered automation, desktop tooling, and intuitive UI systems." />
+  <meta name="author" content="Pragun Anand" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph metadata for social link previews -->
-  <meta property="og:title" content="Pragun Anand Jha | Portfolio" />
-  <meta property="og:description" content="AI/ML and Full Stack Web Developer. View projects, research, and technical write-ups." />
-  <meta property="og:url" content="https://pragunanand14.github.io" />
-  <meta property="og:type" content="profile" />
-
-  <!-- Structured Schema for Google Knowledge Graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Pragun Anand Jha",
+    "name": "Pragun Anand",
+    "alternateName": "Pragun Anand Jha",
     "url": "https://pragunanand14.github.io",
-    "jobTitle": "AI/ML & Software Developer",
+    "jobTitle": "Dashboard & Software Development Intern",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Manav Rachna University - MR IMPACT 6.0"
+    },
     "alumniOf": {
       "@type": "CollegeOrUniversity",
       "name": "Manav Rachna University"
     },
-    "sameAs": [
-      "https://github.com/pragunanand14",
-      "https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME"
-    ],
-    "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Python", "Full Stack Development"]
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Desktop Automation",
+      "UI/UX Design",
+      "Python",
+      "Java GUI",
+      "Dashboard Architecture"
+    ]
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #0d1117;
-      --card: #161b22;
-      --text: #c9d1d9;
-      --accent: #58a6ff;
-      --border: #30363d;
+      --bg: #07090e;
+      --card-bg: rgba(18, 22, 34, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-border-hover: rgba(99, 102, 241, 0.4);
+      --accent: #6366f1;
+      --accent-glow: rgba(99, 102, 241, 0.25);
+      --cyan: #06b6d4;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --badge-bg: rgba(99, 102, 241, 0.12);
+      --badge-border: rgba(99, 102, 241, 0.3);
     }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 2rem 1rem;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
       line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
     }
+
+    /* Ambient Background Blobs */
+    .ambient-glow {
+      position: fixed;
+      width: 550px;
+      height: 550px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      filter: blur(80px);
+      z-index: -1;
+      pointer-events: none;
+      transition: transform 0.2s ease-out;
+    }
+
+    .glow-1 { top: -100px; left: -100px; }
+    .glow-2 { bottom: -100px; right: -100px; background: radial-gradient(circle, rgba(6, 182, 212, 0.18) 0%, transparent 70%); }
+
+    /* Layout Container */
     .container {
-      max-width: 800px;
+      max-width: 1040px;
       margin: 0 auto;
+      padding: 0 1.5rem;
     }
-    header {
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 1.5rem;
+
+    /* Top Navigation */
+    nav {
+      position: sticky;
+      top: 1rem;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(7, 9, 14, 0.75);
+      border: 1px solid var(--card-border);
+      border-radius: 9999px;
+      margin: 1.5rem auto;
+      max-width: 900px;
+      padding: 0.75rem 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: border-color 0.3s ease;
+    }
+
+    nav:hover {
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .nav-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 5rem 0 3.5rem;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: var(--badge-bg);
+      border: 1px solid var(--badge-border);
+      color: #c7d2fe;
+      padding: 0.35rem 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.7; }
+    }
+
+    h1.hero-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+      background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p.hero-desc {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      line-height: 1.7;
       margin-bottom: 2rem;
     }
-    h1 {
-      color: #ffffff;
-      font-size: 2.2rem;
-      margin-bottom: 0.2rem;
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
-    h2 {
-      color: #f0f6fc;
-      font-size: 1.4rem;
-      margin-top: 2rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.4rem;
-    }
-    .subtitle {
-      color: var(--accent);
-      font-weight: 500;
-      margin-top: 0;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1rem 1.25rem;
-      margin-bottom: 1rem;
-    }
-    .card h3 {
-      margin: 0 0 0.5rem 0;
-      color: #ffffff;
-    }
-    .links a {
-      color: var(--accent);
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.92rem;
       text-decoration: none;
-      margin-right: 1.2rem;
-      font-weight: bold;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
     }
-    .links a:hover {
-      text-decoration: underline;
+
+    .btn-primary {
+      background: #ffffff;
+      color: #0b0f19;
+    }
+
+    .btn-primary:hover {
+      background: #e2e8f0;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+      border: 1px solid var(--card-border);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    /* Section Styles */
+    section {
+      padding: 3rem 0;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--cyan);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-heading {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 2rem;
+      color: #ffffff;
+    }
+
+    /* Glass Cards */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .card:hover {
+      border-color: var(--card-border-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Featured Internship Card */
+    .internship-banner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: start;
+      gap: 1.5rem;
+    }
+
+    .stat-badge {
+      text-align: right;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      padding: 0.85rem 1.25rem;
+      border-radius: 12px;
+      white-space: nowrap;
+    }
+
+    .stat-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #a5b4fc;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Grid for Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+      margin-right: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.35rem;
+      margin: 0.75rem 0;
+      color: #fff;
+    }
+
+    .project-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin-bottom: 1.25rem;
+    }
+
+    .feature-list li {
+      position: relative;
+      padding-left: 1.2rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .feature-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+    }
+
+    /* Skills Modular Grid */
+    .skills-matrix {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .skill-category {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+
+    .skill-category h4 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #cbd5e1;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .pill-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .skill-pill {
+      font-size: 0.82rem;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 3rem 0;
+      margin-top: 4rem;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 768px) {
+      .internship-banner {
+        grid-template-columns: 1fr;
+      }
+      .stat-badge {
+        text-align: left;
+      }
+      .nav-links {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
+
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <nav>
+    <div class="nav-brand">Pragun Anand</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#toolkit">Toolkit</a></li>
+    </ul>
+  </nav>
+
   <div class="container">
-    <header>
-      <h1>Pragun Anand Jha</h1>
-      <p class="subtitle">B.Tech Computer Science (AI & ML) | Developer</p>
-      <p>Building intelligent systems, scalable web applications, and autonomous agent workflows.</p>
-      <div class="links">
-        <a href="https://github.com/pragunanand14" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank" rel="noopener">LinkedIn</a>
+    <header class="hero" id="about">
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        Currently Interning: Dashboard Intern @ MR IMPACT 6.0
+      </div>
+      <h1 class="hero-title">Engineering pragmatic tools,<br>AI workflows & sleek interfaces.</h1>
+      <p class="hero-desc">
+        Undergraduate at Manav Rachna University working at the intersection of practical software development, interactive dashboards, and desktop automation. Focused on turning complex logic into structured, responsive experiences.
+      </p>
+      <div class="hero-actions">
+        <a href="https://github.com/pragunanand14" target="_blank" rel="noopener" class="btn btn-primary">
+          Explore Repositories
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="btn btn-secondary">
+          Connect on LinkedIn
+        </a>
       </div>
     </header>
 
-    <section>
-      <h2>Featured Work</h2>
+    <section id="experience">
+      <div class="section-label">Selected Experience</div>
+      <h2 class="section-heading">Competitive Internship</h2>
+
       <div class="card">
-        <h3>AI & Machine Learning Projects</h3>
-        <p>Applied workflows focusing on intelligent agents, predictive models, and modern full-stack integrations.</p>
+        <div class="internship-banner">
+          <div>
+            <div class="project-tag">Cohort 6.0</div>
+            <div class="project-tag">Active 2026</div>
+            <h3 style="font-size: 1.4rem; color: #fff; margin-top: 0.5rem;">Dashboard Developer — Quality Assurance & Accreditation</h3>
+            <p style="color: var(--cyan); font-weight: 500; font-size: 0.95rem; margin-bottom: 0.75rem;">Manav Rachna University</p>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+              Selected for the competitive MR IMPACT 6.0 initiative. Currently spearheading UI/UX layout and dashboard architecture for institutional accreditation teams, translating hierarchical administrative metrics into intuitive digital views.
+            </p>
+          </div>
+          <div class="stat-badge">
+            <div class="stat-number">75 / 3,600+</div>
+            <div class="stat-label">Applicants Selected (~2%)</div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <section id="projects">
+      <div class="section-label">Featured Initiatives</div>
+      <h2 class="section-heading">Systems & Interfaces</h2>
+
+      <div class="projects-grid">
+        <div class="card project-card">
+          <span class="project-tag">Institutional UI</span>
+          <span class="project-tag">Frontend Architecture</span>
+          <h3>IQAC Management Dashboard</h3>
+          <p>
+            A high-fidelity dashboard built for the Internal Quality Assurance Cell (IQAC). Focuses on structural clarity, modular information architecture, and multi-tier institutional presentation.
+          </p>
+          <ul class="feature-list">
+            <li>Structured views: Director Spotlight, Goal Objectives, and Team Hierarchies</li>
+            <li>Designed interactive navigation models tailored for non-technical leadership</li>
+            <li>Bridged visual prototyping with clean frontend component implementation</li>
+          </ul>
+        </div>
+
+        <div class="card project-card">
+          <span class="project-tag">Autonomous Agent</span>
+          <span class="project-tag">Python Systems</span>
+          <h3>IGRIS — Desktop Automation Agent</h3>
+          <p>
+            An ambitious desktop companion designed to act as an operating-system layer assistant. Translates natural language commands directly into document and file-system manipulation.
+          </p>
+          <ul class="feature-list">
+            <li>File system traversal and real-time document modification via natural language</li>
+            <li>Architected to run on standard environments without version lock-in</li>
+            <li>Designed for LLM workflow integration (Gemini-powered reasoning pipelines)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="toolkit">
+      <div class="section-label">Capabilities</div>
+      <h2 class="section-heading">Technical Stack & Core Disciplines</h2>
+
+      <div class="skills-matrix">
+        <div class="skill-category">
+          <h4>Core Languages</h4>
+          <div class="pill-wrap">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">JavaScript / ES6</span>
+            <span class="skill-pill">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4>AI & Automation</h4>
+          <div class="pill-wrap">
+            <span class="skill-pill">Autonomous Workflows</span>
+            <span class="skill-pill">Gemini API</span>
+            <span class="skill-pill">OS Automation</span>
+            <span class="skill-pill">Prompt Structuring</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4>Interface & UI</h4>
+          <div class="pill-wrap">
+            <span class="skill-pill">Dashboard Layouts</span>
+            <span class="skill-pill">Information Architecture</span>
+            <span class="skill-pill">Java AWT / GUI</span>
+            <span class="skill-pill">Modern Responsive CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4>Development Approach</h4>
+          <div class="pill-wrap">
+            <span class="skill-pill">Interactive Proof-of-Concepts</span>
+            <span class="skill-pill">Rapid Prototyping</span>
+            <span class="skill-pill">Visual Hierarchy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Designed and built by Pragun Anand • Hosted cleanly on GitHub Pages</p>
+    </footer>
   </div>
+
+  <script>
+    // Subtle interactive light trail that follows cursor movement
+    const glow = document.querySelector('.glow-1');
+    window.addEventListener('mousemove', (e) => {
+      const x = e.clientX - 275;
+      const y = e.clientY - 275;
+      glow.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
+    });
+  </script>
 </body>
 </html>
